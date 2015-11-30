@@ -1,0 +1,23 @@
+CC=g++ 
+CFLAGS=-O3
+CFLAGS+=-DUSE_OPENCV
+INC= -I/usr/local/include 
+
+LDFLAGS=-L/usr/local/lib -lopencv_core -lopencv_features2d -lopencv_flann\
+		-lopencv_imgproc -lopencv_highgui \
+		-lopencv_legacy -lopencv_nonfree -lrt -lpthread
+
+TARGET=starter_video
+
+all:$(TARGET)
+
+$(TARGET):starter_video.o
+	$(CC) $(CFLAGS) $^ -o $@ $(INC) $(LDFLAGS)
+
+compare.o:starter_video.cpp
+	$(CC) $(CFLAGS) $(INC) -o $@ -c $<
+
+clean:
+	rm -fr $(TARGET)
+	rm -fr *.o
+	rm -fr *.~
