@@ -1,0 +1,55 @@
+
+Boost Mutex Examples
+====================
+
+By Gavin Baker <gavinb@antonym.org>
+
+Provides fully working examples of different types of mutexes using the
+Boost thread module.
+
+duel
+----
+
+Two threads both try to modify the same counter, one up and one down.  No
+mutex is used to protect the counter.
+
+trylock
+-------
+
+Instead of blocking to acquire the mutex, this example shows how to take
+alternative action if the mutex is already held.
+
+timedlock
+---------
+
+Shows how to use a timeout to acquire a mutex, so it will not block
+indefinitely.
+
+reclock
+-------
+
+Illustrates how a recursive lock can be used when two methods may be called
+with or without the mutex held, and one calls the other.
+
+deadlock
+--------
+
+Two threads access two mutexes protecting some shared resource, but they
+lock in a different order.  After enough iterations, they will eventually
+deadlock.
+
+common
+------
+
+In order to keep the code as short and focused as possible, utility
+functions are grouped into a common module.  This provides features such as
+logging and random delays which are used by all examples.
+
+
+tests
+-----
+
+All the programs produce structured output. That is, they write to stdout in
+a known line format, which can later be analysed for statistics.  I use
+GNU R (http://www.r-project.org/) for the analysis, which is also how the
+data plots were produced for the articles.

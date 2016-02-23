@@ -1,0 +1,54 @@
+
+The `antonym.org` Boost Documentation Project
+=============================================
+
+By Gavin Baker <gavinb@antonym.org>
+
+This project contains source code examples that illustrate how to use
+various libraries from the Boost C++ project, starting with the `threads`
+module.  The accompanying articles are published at:
+
+        http://antonym.org/boost
+
+The currently available articles are as follows:
+
+ - Part I: Threads
+ - Part II: Threading Challenges
+ - Part III: Mutexes
+ - Part IV: Mutex Examples
+ - Part V: Condition Variables
+
+The source tree is organised as follows:
+
+ - `threads`: examples for Part I
+ - `mutexes`: sample code for parts III and IV
+ - `condition`: condition variables for Part V
+ - `memory`: smart pointers
+
+The articles on my blog are published under a Creative Commons Attribution
+Non-Commercial Share-Alike 2.5 license [1].  The source exmples herein are
+published under the most permissive and shortest license I could find, which
+is the MIT license (see [2] or LICENSE file for details).  It takes many,
+many hours to write all these articles, write the code, test it and prepare
+it for the web.  Basically, do whatever you like with the sample code, but
+please respect my copyright on the articles.
+
+    [1] http://creativecommons.org/licenses/by-nc-sa/2.5/au
+    [2] http://www.opensource.org/licenses/mit-license.php
+
+I hope this work is useful to you.  Given how useful I have found the Boost
+libraries, this is one way I can contribute back to the community, by
+writing articles and sample code.
+
+If you have any suggestions, comments or feedback, please do not hesitate to
+contact me at the above address.  I am publishing the source repository at:
+
+        http://bitbucket.org/gavinb/boost_samples/
+
+so that anyone can clone the source, modify it, send patches, and so on.
+Contributions welcome!
+
+  :: Gavin Baker
+
+  Spring, 2009
+  Melbourne, Australia

@@ -1,0 +1,20 @@
+
+# Update these settings and paths according to your local configuration
+
+# Use: 'bjam --toolset=darwin' to compile under Mac OS X with MacPorts
+
+#using gcc ;
+
+project
+        : requirements <include>/opt/local/include
+                       <threading>multi
+                       ;
+
+# Threading library
+
+lib boost_thread : : <name>boost_thread-mt <search>/opt/local/lib ;
+
+# Cooperating threads example
+
+exe producer_consumer : producer_consumer.cpp boost_thread ;
+exe producer_consumer2 : producer_consumer2.cpp boost_thread ;

@@ -1,0 +1,3 @@
+syntax: glob
+mutexes/bin/*
+threads/bin/*

@@ -1,0 +1,43 @@
+
+# Update these settings and paths according to your local configuration
+
+# Use: 'bjam --toolset=darwin' to compile under Mac OS X with MacPorts
+
+#using gcc ;
+
+project
+        : requirements <include>/opt/local/include
+                       <threading>multi
+                       ;
+
+# Threading library
+
+lib boost_thread : : <name>boost_thread-mt <search>/opt/local/lib ;
+
+# Duelling threads example
+
+exe duel : duel.cpp boost_thread ;
+
+# Bad Reference Counting example
+
+#exe refcount : refcount.cpp boost_thread ;
+
+# Timed mutexes
+
+exe timedlock : timedlock.cpp boost_thread ;
+
+# Queueing example
+
+exe trylock : trylock.cpp boost_thread ;
+
+# Recursive lock example
+
+exe reclock : reclock.cpp boost_thread ;
+
+# Deadlock example
+
+exe deadlock : deadlock.cpp common.cpp boost_thread ;
+
+# Shared Read/Write example
+
+exe sharedlock : sharedlock.cpp common.cpp boost_thread ;
